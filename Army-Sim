@@ -1,0 +1,87 @@
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local Rambo = Instance.new("TextButton")
+local LevelUP = Instance.new("TextButton")
+local Namechange = Instance.new("TextButton")
+
+--Properties:
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.new(0.262745, 0.262745, 0.262745)
+Frame.BackgroundTransparency = 0.20000000298023
+Frame.BorderColor3 = Color3.new(0.160784, 0.960784, 1)
+Frame.BorderSizePixel = 2
+Frame.Position = UDim2.new(0.00987654924, 0, 0.251842737, 0)
+Frame.Size = UDim2.new(0, 195, 0, 404)
+
+Title.Name = "Title"
+Title.Parent = Frame
+Title.BackgroundColor3 = Color3.new(1, 1, 1)
+Title.BackgroundTransparency = 1
+Title.Size = UDim2.new(0, 195, 0, 50)
+Title.Font = Enum.Font.SciFi
+Title.Text = "Nigerian Army Sim"
+Title.TextColor3 = Color3.new(1, 1, 1)
+Title.TextScaled = true
+Title.TextSize = 14
+Title.TextWrapped = true
+
+Rambo.Name = "Rambo"
+Rambo.Parent = Frame
+Rambo.BackgroundColor3 = Color3.new(0.14902, 0.14902, 0.14902)
+Rambo.BorderColor3 = Color3.new(0.160784, 0.960784, 1)
+Rambo.BorderSizePixel = 2
+Rambo.Position = UDim2.new(0.0410256423, 0, 0.123762377, 0)
+Rambo.Size = UDim2.new(0, 179, 0, 27)
+Rambo.Font = Enum.Font.SciFi
+Rambo.Text = "RAMBO"
+Rambo.TextColor3 = Color3.new(1, 1, 1)
+Rambo.TextScaled = true
+Rambo.TextSize = 14
+Rambo.TextWrapped = true
+
+Namechange.Name = "Namechange"
+Namechange.Parent = Frame
+Namechange.BackgroundColor3 = Color3.new(0.14902, 0.14902, 0.14902)
+Namechange.BorderColor3 = Color3.new(0.160784, 0.960784, 1)
+Namechange.BorderSizePixel = 2
+Namechange.Position = UDim2.new(0.0410256423, 0, 0.212871283, 0)
+Namechange.Size = UDim2.new(0, 179, 0, 27)
+Namechange.Font = Enum.Font.SciFi
+Namechange.Text = "ABSOLUTE UNIT"
+Namechange.TextColor3 = Color3.new(1, 1, 1)
+Namechange.TextScaled = true
+Namechange.TextSize = 14
+Namechange.TextWrapped = true
+
+LevelUP.Name = "LevelUP"
+LevelUP.Parent = Frame
+LevelUP.BackgroundColor3 = Color3.new(0.14902, 0.14902, 0.14902)
+LevelUP.BorderColor3 = Color3.new(0.160784, 0.960784, 1)
+LevelUP.BorderSizePixel = 2
+LevelUP.Position = UDim2.new(0.0410256423, 0, 0.300594277, 0)
+LevelUP.Size = UDim2.new(0, 179, 0, 27)
+LevelUP.Font = Enum.Font.SciFi
+LevelUP.Text = "Lots of XP"
+LevelUP.TextColor3 = Color3.new(1, 1, 1)
+LevelUP.TextScaled = true
+LevelUP.TextSize = 14
+LevelUP.TextWrapped = true
+
+
+-- Scripts:
+
+Namechange.MouseButton1Click:Connect(function()
+game.ReplicatedStorage.namer:FireServer("ABSOLUTE UNIT")
+end)
+
+Rambo.MouseButton1Click:Connect(function()
+game.ReplicatedStorage.giveTool:FireServer("Rambo")
+end)
+
+LevelUP.MouseButton1Click:Connect(function()
+game.ReplicatedStorage.addXP:FireServer(99999)
+end)
